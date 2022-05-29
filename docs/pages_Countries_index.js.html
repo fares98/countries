@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: pages/Countries/index.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,139 +17,46 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: pages/Countries/index.js</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>To run the app locally</h2>
-<h3>In the project directory</h3>
-<h4>1- Run the command <code>npm i</code> to install the packages that you need to run the project</h4>
-<h4>2- Run the command <code>npm start</code> to view the app in the browser</h4></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>/** @module Countries Page */
+
+import { useSelector } from "react-redux";
+import { useGetAllCountriesQuery } from "store/countries/api";
+import { countriesSelector } from "store/countries/selectors";
+import { Table, FormModal, HeroBanner, Spinner } from "components";
+
+/**
+ * The Root for Countries page that contains (HeroBanner component, Table of countries component, FormModal component for edit/create country)
+ */
+
+const Countries = () => {
+  const { isLoading } = useGetAllCountriesQuery();
+  const countries = useSelector(countriesSelector);
+
+  if (isLoading) return &lt;Spinner />;
+  if (!countries?.length) return &lt;div>No countries&lt;/div>;
+
+  return (
+    &lt;>
+      &lt;HeroBanner />
+      &lt;FormModal />
+      &lt;Table data={countries} />
+    &lt;/>
+  );
+};
+
+export default Countries;
+</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>index.js</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>index.js is the root file that contains the redux provider</p></div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li>Fares Alhelo</li>
-        </ul>
-    </dd>
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line8">line 8</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
 
 
 

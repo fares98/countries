@@ -5,6 +5,11 @@ import { store } from "store";
 import { Countries } from "pages";
 import "./index.css";
 
+/**
+ * @file index.js is the root file that contains the redux provider
+ * @author Fares Alhelo
+ */
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
