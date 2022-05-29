@@ -1,0 +1,1 @@
+export const countriesSelector = (state) => state?.countries?.countries || []
