@@ -53,6 +53,7 @@ const inputsData = [
   {
     label: "Country Population",
     name: "population",
+    type: 'number',
     rules: [
       {
         required: true,

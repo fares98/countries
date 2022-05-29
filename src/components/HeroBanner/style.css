@@ -1,0 +1,39 @@
+.hero-banner-container {
+  height: 60vh;
+  background-image: url("https://www.business2community.com/wp-content/uploads/2020/10/Internet-blocking-web-filter.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-banner-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 2;
+  text-align: center;
+}
+
+.title {
+  color: #fff;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.create-btn {
+  align-self: center;
+}

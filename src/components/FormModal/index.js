@@ -37,7 +37,7 @@ const FormModal = () => {
       >
         {inputsData.map((ele) => (
           <AntdForm.Item key={ele.name} {...ele}>
-            <Input />
+            <Input type={ele.type || 'text'} />
           </AntdForm.Item>
         ))}
       </AntdForm>
