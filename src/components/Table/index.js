@@ -6,16 +6,20 @@ const Table = ({ data: dataSource = [] }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   return (
-    <BaseTable
-      columns={getColumns({ currentPage })}
-      dataSource={dataSource}
-      rowKey={({ latlng }) => latlng[0]}
-      pagination={{
-        defaultPageSize: 10,
-        position: ["bottomCenter"],
-        onChange: setCurrentPage,
-      }}
-    />
+    <div className="table-container">
+      <div className="scroll-container">
+        <BaseTable
+          columns={getColumns({ currentPage })}
+          dataSource={dataSource}
+          rowKey={({ latlng }) => latlng[0]}
+          pagination={{
+            defaultPageSize: 10,
+            position: ["bottomCenter"],
+            onChange: setCurrentPage,
+          }}
+        />
+      </div>
+    </div>
   );
 };
 
