@@ -1,5 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
+/**
+ * @module FormModal Slice
+ */
 
+/**
+ *  An example about the data names to reset form when needed
+ * @type {{}}
+*/
 const emptyDataSchema = {
   flag: "",
   name: "",

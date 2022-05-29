@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: store/formModal/selectors.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,139 +17,35 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: store/formModal/selectors.js</h1>
 
     
 
 
 
     
-
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
     <section>
-        <article><h2>To run the app locally</h2>
-<h3>In the project directory</h3>
-<h4>1- Run the command <code>npm i</code> to install the packages that you need to run the project</h4>
-<h4>2- Run the command <code>npm start</code> to view the app in the browser</h4></article>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @module FormModal Selectors
+ */
+
+/** To get the data that user needs to edit to show it in the edit form */
+export const editableCountryDataSelector = ({ formModal }) =>
+  formModal?.editableCountryData;
+
+/** To check if the FormModal is open or not */
+export const isOpenModalSelector = ({ formModal }) => formModal?.isOpen;
+
+/** To check the action needed for the modal (edit country or create country) */
+export const actionTypeSelector = ({ formModal }) => formModal?.actionType;
+
+/** To get an example about the data names to reset form when needed */
+export const emptyDataSchemaSelector = ({ formModal }) =>
+  formModal?.emptyDataSchema;
+</code></pre>
+        </article>
     </section>
-
-
-
-
-
-
-
-
-
-<section>
-
-<header>
-    
-        <h2>index.js</h2>
-        
-    
-</header>
-
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>index.js is the root file that contains the redux provider</p></div>
-        
-
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-author">Author:</dt>
-    <dd class="tag-author">
-        <ul>
-            <li>Fares Alhelo</li>
-        </ul>
-    </dd>
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="index.js.html">index.js</a>, <a href="index.js.html#line8">line 8</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</article>
-
-</section>
 
 
 

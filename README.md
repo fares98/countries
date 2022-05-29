@@ -1,12 +1,6 @@
+## To run the app locally
 
-## Available Scripts
+### In the project directory
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### 1- Run the command `npm i` to install the packages that you need to run the project
+#### 2- Run the command `npm start` to view the app in the browser
